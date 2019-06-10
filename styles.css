@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.people {
+    margin: 30px auto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(4, 200px);
+    grid-gap: 40px 30px;
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 23px;
+    color: #2f4f4f;
+    font-weight: bold;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in-out;
+}
+
+.photo {
+    position: relative;
+}
+
+.photo>img {
+    width: 200px;
+    border-radius: 50%;
+    transition: all 1s ease-in-out;
+}
+
+.rank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 18px;
+    background-color: white;
+    color: #8b0000;
+    position: absolute;
+    top: 84px;
+    right: 10px;
+}
+
+.extra {
+    display: none;
+}
+
+.sport::after {
+    content: ",";
+}
+
+.pay::before {
+    content: "$";
+}
+
+.pay::after {
+    content: "M";
+}
+
+.person:hover {
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 10px;
+    transform: scale(1.2);
+}
+
+.person:hover img {
+    border-radius: 60px;
+    background-color: #eee;
+}
+
+.person:hover .extra {
+    display: block;
+    transform: scale(1.2);
+}
+
+@media (max-width: 499px) {
+    .people {
+        grid-template-columns: repeat(2, 200px);
+        justify-content: space-evenly;
+        justify-content: center;
+        justify-items: center;
+    }
+}
+
+@media (max-width: 999px) {
+    .people {
+        grid-template-columns: repeat(2, 200px);
+        justify-content: space-evenly;
+        justify-content: center;
+        justify-items: center;
+    }
+}
